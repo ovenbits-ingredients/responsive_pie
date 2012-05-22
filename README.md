@@ -5,7 +5,7 @@ This is a responsive design template that we can use as a starting point for any
 
 This is using serve, so that the designers on our team can get going faster without figuring out rails, etc :)  
 
-This project has compass, for the reset and utilities/mixins, although the latter isn't be used in this implementation yet. That's for you to develop in your specific project (or rip it out if you don't need it). I recommend keeping the reset stuff in there, regardless, since the responsive template and grid stylesheets are depending on the reset.  
+This project has compass, for the reset and utilities/mixins, although the latter isn't being used in this implementation yet. That's for you to develop in your specific project (or rip it out if you don't need it). I recommend keeping the reset stuff in there regardless, since the responsive template and grid stylesheets are depending on the reset.  
 
 There is a view helper ruby file that has a lot of the layout helpers configured in there. If you look in the helper file,
 you'll see that some things need to be uncommented once this project's contents are permanently living in your rails app (serve doesn't include a lot of the 
@@ -20,8 +20,7 @@ How do I install and run Serve?
 
 Serve is distributed as a Ruby gem to make it easy to get up and running. You
 must have Ruby installed in order to download and use Serve. The Ruby download
-page provides instructions for getting Ruby setup on different platforms:
-
+page provides instructions for getting Ruby setup on different platforms:  
 <http://www.ruby-lang.org/en/downloads/>
 
 After you have Ruby installed, open up the command prompt and type:
