@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ## MAC OS
 .DS_Store
 
@@ -24,8 +23,7 @@ pkg
 *.gem
 .rvmrc
 .bundle
-=======
-*.gem
+
 *.rbc
 .bundle
 .config
@@ -43,4 +41,3 @@ tmp
 .yardoc
 _yardoc
 doc/
->>>>>>> 6a89f096e65d4d7411bca12185efa9365d280b5a
