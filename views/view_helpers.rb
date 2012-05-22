@@ -3,11 +3,10 @@ module ViewHelpers
   def cc_html(options={}, &blk)
     attrs = options.map { |(k, v)| " #{h k}='#{h v}'" }.join('')
     [ "<!--[if IEMobile 7]><html #{attrs} class='no-js iem7'><![endif]-->",
-      "<!--[if (gt IEMobile 7)|!(IEMobile)]><!--><html #{attrs} class='no-js' lang='en'><!--<![endif]-->",
-      "<!--[if lt IE 7]><html #{attrs} class='no-js lt-ie9 lt-ie8 lt-ie7' lang='en'> <![endif]-->",
-      "<!--[if (IE 7)&!(IEMobile)]><html #{attrs} class='no-js lt-ie9 lt-ie8' lang='en'><![endif]-->",
-      "<!--[if (IE 8)&!(IEMobile)]><html #{attrs} class='no-js lt-ie9' lang='en'><![endif]-->",
-      "<!--[if gt IE 8]><!--> <html #{attrs} class='no-js' lang='en'><!--<![endif]-->",
+      "<!--[if lt IE 7]><html #{attrs} class='no-js lt-ie9 lt-ie8 lt-ie7'> <![endif]-->",
+      "<!--[if (IE 7)&!(IEMobile)]><html #{attrs} class='no-js lt-ie9 lt-ie8'><![endif]-->",
+      "<!--[if (IE 8)&!(IEMobile)]><html #{attrs} class='no-js lt-ie9'><![endif]-->",
+      "<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--> <html #{attrs} class='no-js'><!--<![endif]-->",
       capture_haml(&blk).strip,
       "</html>"
     ].join("\n")
