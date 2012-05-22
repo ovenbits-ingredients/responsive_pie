@@ -1,0 +1,19 @@
+@import "partials/base";
+
+// ** Few more custom base styles (The crust) **
+// This file is for basic layouts/styles that are applied to everything (mobile/desktop/everything in between)
+
+body {
+  font-size:1em;
+}
+
+.container {
+  max-width:1280px;
+  margin:0 auto;
+  overflow:hidden;
+  width:100%;
+}
+
+.row {
+  max-width:1280px;
+}

@@ -1,0 +1,17 @@
+header h1 {
+  font-size: 1.6em;
+  padding: 2%;
+  padding: 2%;
+}
+
+.row {
+  margin-bottom: 5px;
+  color: #222;
+}
+
+.row div {
+  -webkit-transition: width 0.2s linear;
+  -moz-transition: width 0.2s linear;
+  background-color: pink;
+  text-align: center;
+}

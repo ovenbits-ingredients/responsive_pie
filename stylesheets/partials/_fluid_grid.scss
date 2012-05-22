@@ -1,0 +1,110 @@
+// Fluid grid with all the percentages for each grid step - usually only needs to be imported into desktop (or anything bigger than mobile)
+
+$grid_margin: 1%;
+$row_width: 95%;
+
+.alpha, .first { margin-left: 0; }
+
+.omega, .last { margin-right: 0; }
+
+.row {
+  width:$row_width;
+  margin-left: (100%-$row_width)/2;
+  margin-right: (100%-$row_width)/2;
+  .grid_1, .grid_2, .grid_3, 
+  .grid_4, .grid_5, .grid_6, 
+  .grid_7, .grid_8, .grid_9, 
+  .grid_10, .grid_11, .grid_12 {
+    margin-right:$grid_margin;
+    margin-left:$grid_margin;
+    display:block;
+  }
+  .grid_1 {
+    width: 6.333%; }
+  .grid_2 {
+    width: 14.666%; }
+  .grid_3 {
+    width: 23%; }
+  .grid_4 {
+    width: 31.333%; }
+  .grid_5 {
+    width: 39.666%; }
+  .grid_6 {
+    width: 48%; }
+  .grid_7 {
+    width: 56.333%; }
+  .grid_8 {
+    width: 64.666%; }
+  .grid_9 {
+    width: 73%; }
+  .grid_10 {
+    width: 81.333%; }
+  .grid_11 {
+    width: 89.666%; }
+  .grid_12 {
+    width: 98%; }
+  .prefix_1 {
+    margin-left: 8.333% + $grid_margin; }
+  .prefix_2 {
+    margin-left: 16.666% + $grid_margin; }
+  .prefix_3 {
+    margin-left: 25% + $grid_margin; }   
+  .prefix_4 {
+    margin-left: 33.333% + $grid_margin; }
+  .prefix_5 {
+    margin-left: 41.666% + $grid_margin; }
+  .prefix_6 {
+    margin-left: 50% + $grid_margin; }
+  .prefix_7 {
+    margin-left: 58.333% + $grid_margin; }
+  .prefix_8 {
+    margin-left: 66.666% + $grid_margin; }
+  .prefix_9 {
+    margin-left: 75% + $grid_margin; }
+  .prefix_10 {
+    margin-left: 83.333% + $grid_margin; }
+  .prefix_11 {
+    margin-left: 91.666% + $grid_margin; }
+  .suffix_1 {
+    margin-right: 8.333% + $grid_margin; }
+  .suffix_2 {
+    margin-right: 16.666% + $grid_margin; }
+  .suffix_3 {
+    margin-right: 25% + $grid_margin; }
+  .suffix_4 {
+    margin-right: 33.333% + $grid_margin; }
+  .suffix_5 {
+    margin-right: 41.666% + $grid_margin; }
+  .suffix_6 {
+    margin-right: 50% + $grid_margin; }
+  .suffix_7 {
+    margin-right: 58.333% + $grid_margin; }
+  .suffix_8 {
+    margin-right: 66.666% + $grid_margin; }
+  .suffix_9 {
+    margin-right: 75% + $grid_margin; }
+  .suffix_10 {
+    margin-right: 83.333% + $grid_margin; }
+  .suffix_11 {
+    margin-right: 91.666% + $grid_margin; }
+}
+
+/** some ie fixes **/
+.lt_ie9 {
+  .grid_1,
+  .grid_2,
+  .grid_3,
+  .grid_4,
+  .grid_5,
+  .grid_6,
+  .grid_7,
+  .grid_8,
+  .grid_9,
+  .grid_10,
+  .grid_11,
+  .grid_12
+  {
+  	margin-left: ($grid_margin * .92);
+  	margin-right: ($grid_margin * .92);
+  }
+}

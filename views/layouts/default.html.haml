@@ -1,0 +1,35 @@
+!!!
+!=cc_html(:lang => 'en') do
+  %head
+    / http://t.co/dKP3o1e
+    =meta_tags
+    %title 
+      = @title
+    / For all browsers
+    %link{:href => "stylesheets/crust.css", :rel => "stylesheet", :media => 'screen,handheld'}
+    %link{:href => "stylesheets/mobile.css", :rel => "stylesheet", :media => "only screen and (min-width:320px)"}
+    %link{:href => "stylesheets/desktop.css", :rel => "stylesheet", :media => "only screen and (min-width:768px)"}
+    
+    // Javascript - These need to be in header right after css links
+    %script{:src => "javascripts/modernizr-2.5.3-min.js"}
+    // Media Queries Polyfill https://github.com/shichuan/mobile-html5-boilerplate/wiki/Media-Queries-Polyfill
+    //NOTE: if respond(.min).js is on a cdn (s3, cloudfront, etc), respond.proxy will have to be configured for crossdomain purposes
+    =modernizr
+
+    / Selectivizr doesn't work out of the box with respond.js, which is far more important. 
+    / It also needs to be loaded from the same domain, like respond. If you plan on using selectivizr, 
+    / do some proxy magic or don't deploy it to s3.
+    /[if (lt IE 9) & (!IEMobile)]
+    /  %script{:src => "javascripts/selectivizr-min.js"}
+    
+    / Microsoft sometimes prevents links from opening in mobile Safari. iPhone haters.
+    =microsoft_fix_for_mobile
+
+  %body
+    .container
+      = yield
+    = jquery_include_tag("1.7.2")
+    %script{:src => 'javascripts/helper.js'}
+    %script{:src => "javascripts/application.js"}
+    = google_analytics
+    

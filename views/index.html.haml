@@ -1,0 +1,70 @@
+- @title = "Responsive Pie!"
+.row
+  .grid_12
+    %header{:role => "banner"}
+      %h1 My H1 tag that has been SEO soaked and bleeds relevance.
+
+%section{:role => "main"}
+  %article
+    .row
+      .grid_6.mobile_grid_2.first
+        %div grid 6
+      .grid_6.mobile_grid_2.last
+        %div grid 6
+    
+    .row
+      .grid_4.mobile_grid_1.first
+        %div grid 4
+      .grid_3.mobile_hide
+        %div grid 3
+      .grid_5.mobile_grid_3.last
+        %div grid 5
+    
+    .row
+      .grid_8.mobile_grid_1.first
+        %div grid 8
+      .grid_2.mobile_grid_1.mobile_prefix_1
+        %div grid 2
+      .grid_2.mobile_grid_1.last
+        %div grid 2
+        
+    .row
+      .grid_4.mobile_grid_1.first
+        %div grid 4
+      .grid_3.mobile_grid_2.suffix_1
+        %div grid 3
+      .grid_4.mobile_grid_1.last
+        %div grid 4
+  
+    .row
+      .grid_2.suffix_5.first
+        %div grid 2
+      .grid_3
+        %div grid 3
+      .grid_2.last
+        %div grid 2
+    
+    .row
+      .grid_3.prefix_3.suffix_3.first
+        %div grid 3
+      .grid_3.last
+        %div grid 3
+  
+    .row
+      .grid_5.first.mobile_grid_2.mobile_suffix_1
+        %div grid 5
+      .grid_2.prefix_2.mobile_hide
+        %div grid 2
+      .grid_2.prefix_1.mobile_grid_1.last
+        %div grid 2
+  
+    .row
+      .grid_1.first
+        %div grid 1
+      .grid_6.prefix_5.last
+        %div grid 6
+
+  %footer
+    .row
+      .grid_12
+        %p footer boom
