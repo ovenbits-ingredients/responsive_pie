@@ -1,7 +1,7 @@
-What is this?
+What is Responsive Pie?
 =============
 
-This is a responsive design template that we can use as a starting point for our projects that will have some sort of responsive implementation.  
+This is a responsive design template that we can use as a starting point for any of our projects that will have some sort of responsive implementation. This isn't a one size fits all template. But it (hopefully) is a good foundation for most.
 
 This is using serve, so that the designers on our team can get going faster without figuring out rails, etc :)  
 
@@ -43,6 +43,5 @@ Web browser at this URL:
 Learning More
 -------------
 
-You can learn more about Serve on the GitHub project page:
-
+You can learn more about Serve on the GitHub project page:  
 <http://github.com/jlong/serve>
