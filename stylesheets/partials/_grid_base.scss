@@ -36,6 +36,18 @@ $mobile_right_margin:1%;
   margin-bottom:5px;
 }
 
+/** some ie fixes **/
+.lt-ie9 {
+  .row,
+  .grid_1, .grid_2, .grid_3, 
+  .grid_4, .grid_5, .grid_6, 
+  .grid_7, .grid_8, .grid_9, 
+  .grid_10, .grid_11, .grid_12 {
+  	margin-left: ($mobile_left_margin * .95);
+  	margin-right: ($mobile_right_margin * .95);
+  }
+}
+
 .mobile_grid_1 {
   width: 23%;
 }
