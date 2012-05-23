@@ -32,7 +32,7 @@ $mobile_right_margin:1%;
 .grid_7, .grid_8, .grid_9, 
 .grid_10, .grid_11, .grid_12 {
   @extend .row;
-  margin-bottom:$mobile_right_margin;
+  margin-bottom:5px;
 }
 
 .mobile_grid_1 {
