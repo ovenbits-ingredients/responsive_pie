@@ -6,9 +6,11 @@
     %title 
       = @title
     / For all browsers
-    %link{:href => "stylesheets/crust.css", :rel => "stylesheet", :media => 'screen,handheld'}
-    %link{:href => "stylesheets/mobile.css", :rel => "stylesheet", :media => "only screen and (min-width:320px)"}
+    %link{:href => "stylesheets/crust.css", :rel => "stylesheet"}
+    %link{:href => "stylesheets/mobile.css", :rel => "stylesheet"}
     %link{:href => "stylesheets/desktop.css", :rel => "stylesheet", :media => "only screen and (min-width:768px)"}
+    //put any media query specific things in here, otherwise ie7/8 will poop if you put them in the above stylesheets
+    %link{:href => "stylesheets/breakpoint_styles.css", :ref => 'stylesheet'}
     
     // Javascript - These need to be in header right after css links
     %script{:src => "javascripts/modernizr-2.5.3-min.js"}
