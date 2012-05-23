@@ -25,6 +25,7 @@ $mobile_right_margin:1%;
   width: 100% - $mobile_right_margin*2;
   margin-left:$mobile_left_margin;
   margin-right:$mobile_right_margin;
+  position:relative;
 }
 
 .grid_1, .grid_2, .grid_3, 

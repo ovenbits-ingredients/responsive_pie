@@ -47,41 +47,32 @@ module ViewHelpers
   end
   
   def microsoft_fix_for_mobile
-    javascript_tag do
-      javascript = <<-JAVASCRIPT
-        (function(a,b,c){if(c in b&&b[c]){var d,e=a.location,f=/^(a|html)$/i;a.addEventListener("click",function(a){d=a.target;while(!f.test(d.nodeName))d=d.parentNode;"href"in d&&(d.href.indexOf("http")||~d.href.indexOf(e.host))&&(a.preventDefault(),e.href=d.href)},!1)}})(document,window.navigator,"standalone")
-      JAVASCRIPT
-      javascript.html_safe
-    end
+    javascript_tag("
+     (function(a,b,c){if(c in b&&b[c]){var d,e=a.location,f=/^(a|html)$/i;a.addEventListener("click",function(a){d=a.target;while(!f.test(d.nodeName))d=d.parentNode;"href"in d&&(d.href.indexOf("http")||~d.href.indexOf(e.host))&&(a.preventDefault(),e.href=d.href)},!1)}})(document,window.navigator,"standalone")
+    ").html_safe
   end
   
   def modernizr
-    javascript_tag do
-      javascript = <<-JAVASCRIPT
-        Modernizr.load({
-          test : Modernizr.mq('(min-width: 0px)'),
-          nope : ['/javascripts/respond.min.js']
-        });
-      JAVASCRIPT
-      javascript.html_safe
-    end
+    javascript_tag("
+      Modernizr.load({
+        test : Modernizr.mq('(min-width: 0px)'),
+        nope : ['/javascripts/respond.min.js']
+      });
+    ").html_safe
   end
   
   def google_analytics
-    javascript_tag do
-      javascript = <<-JAVASCRIPT
-        var _gaq = _gaq || [];
-        _gaq.push(['_setAccount', 'UA-28311055-1']);
-        _gaq.push(['_trackPageview']);
+    javascript_tag("
+     var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'xxx']);
+      _gaq.push(['_trackPageview']);
 
-        (function() {
-          var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-          ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-          var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-        })();
-      JAVASCRIPT
-      javascript.html_safe
-    end
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    ").html_safe
   end
   
   # RUBY that doesn't need to be copied over to the rails project
