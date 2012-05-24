@@ -19,6 +19,9 @@
   margin-left: 1%;
   display: block;
 }
+.row .desktop_hide {
+  display: none;
+}
 .row .grid_1 {
   width: 6.333%;
 }
@@ -123,20 +126,12 @@
 }
 
 /** some ie fixes **/
-.lt_ie9 .grid_1,
-.lt_ie9 .grid_2,
-.lt_ie9 .grid_3,
-.lt_ie9 .grid_4,
-.lt_ie9 .grid_5,
-.lt_ie9 .grid_6,
-.lt_ie9 .grid_7,
-.lt_ie9 .grid_8,
-.lt_ie9 .grid_9,
-.lt_ie9 .grid_10,
-.lt_ie9 .grid_11,
-.lt_ie9 .grid_12 {
-  margin-left: 0.92%;
-  margin-right: 0.92%;
+.lt-ie9 .grid_1, .lt-ie9 .grid_2, .lt-ie9 .grid_3,
+.lt-ie9 .grid_4, .lt-ie9 .grid_5, .lt-ie9 .grid_6,
+.lt-ie9 .grid_7, .lt-ie9 .grid_8, .lt-ie9 .grid_9,
+.lt-ie9 .grid_10, .lt-ie9 .grid_11, .lt-ie9 .grid_12 {
+  margin-left: 0.935%;
+  margin-right: 0.935%;
 }
 
 .row {

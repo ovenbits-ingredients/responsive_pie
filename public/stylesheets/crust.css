@@ -86,15 +86,45 @@ body {
 }
 
 /* Improve default text rendering, handling of kerning pairs and ligatures */
-/* This worked best in firefox and safari */
+/* This worked best in browsers and landscape devices */
 .row, .grid_1, .grid_2, .grid_3,
 .grid_4, .grid_5, .grid_6,
 .grid_7, .grid_8, .grid_9,
 .grid_10, .grid_11, .grid_12 {
   float: left;
   width: 98%;
-  margin-left: 1.1%;
+  margin-left: 1.048%;
   margin-right: 1%;
+  position: relative;
+}
+
+.grid_1, .grid_2, .grid_3,
+.grid_4, .grid_5, .grid_6,
+.grid_7, .grid_8, .grid_9,
+.grid_10, .grid_11, .grid_12 {
+  margin-bottom: 5px;
+}
+@media screen and (max-width: 400px) {
+  .grid_1, .grid_2, .grid_3,
+  .grid_4, .grid_5, .grid_6,
+  .grid_7, .grid_8, .grid_9,
+  .grid_10, .grid_11, .grid_12 {
+    margin-left: 1.31%;
+    /* portrait small devices */
+  }
+}
+
+/** some ie fixes **/
+.lt-ie9 .row, .lt-ie9 .grid_1, .lt-ie9 .grid_2, .lt-ie9 .grid_3, .lt-ie9
+.grid_4, .lt-ie9 .grid_5, .lt-ie9 .grid_6, .lt-ie9
+.grid_7, .lt-ie9 .grid_8, .lt-ie9 .grid_9, .lt-ie9
+.grid_10, .lt-ie9 .grid_11, .lt-ie9 .grid_12,
+.lt-ie9 .grid_1, .lt-ie9 .grid_2, .lt-ie9 .grid_3,
+.lt-ie9 .grid_4, .lt-ie9 .grid_5, .lt-ie9 .grid_6,
+.lt-ie9 .grid_7, .lt-ie9 .grid_8, .lt-ie9 .grid_9,
+.lt-ie9 .grid_10, .lt-ie9 .grid_11, .lt-ie9 .grid_12 {
+  margin-left: 0.996%;
+  margin-right: 0.95%;
 }
 
 .mobile_grid_1 {
@@ -114,15 +144,15 @@ body {
 }
 
 .mobile_prefix_1 {
-  margin-left: 26.1%;
+  margin-left: 26.048%;
 }
 
 .mobile_prefix_2 {
-  margin-left: 51.1%;
+  margin-left: 51.048%;
 }
 
 .mobile_prefix_3 {
-  margin-left: 76.1%;
+  margin-left: 76.048%;
 }
 
 .mobile_suffix_1 {
@@ -175,6 +205,7 @@ html body * span.clear, html body * div.clear, html body * li.clear, html body *
 }
 
 .clearfix {
+  clear: both;
   display: inline-block;
 }
 
@@ -193,6 +224,9 @@ body {
   width: 100%;
 }
 
-.row {
+.row, .grid_1, .grid_2, .grid_3,
+.grid_4, .grid_5, .grid_6,
+.grid_7, .grid_8, .grid_9,
+.grid_10, .grid_11, .grid_12 {
   max-width: 1280px;
 }
