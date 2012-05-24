@@ -17,7 +17,7 @@ body {
   text-rendering:optimizeLegibility
 } /* Improve default text rendering, handling of kerning pairs and ligatures */
 
-$mobile_left_margin:1.05%; /* This worked best in firefox and safari */
+$mobile_left_margin:1.048%; /* This worked best in browsers and landscape devices */
 $mobile_right_margin:1%;
 
 .row {
@@ -34,6 +34,9 @@ $mobile_right_margin:1%;
 .grid_10, .grid_11, .grid_12 {
   @extend .row;
   margin-bottom:5px;
+  @media screen and (max-width: 400px){
+    margin-left:$mobile_left_margin * 1.25; /* portrait small devices */
+  }
 }
 
 /** some ie fixes **/
