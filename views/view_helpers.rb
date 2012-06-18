@@ -18,7 +18,7 @@ module ViewHelpers
       tag("meta", :name => "description", :content => "A responsive template"),
       tag("meta", :name => "author", :content => "c to the izzo"),
       tag("meta", "http-equiv" => "Content-Language", "content" => "en"),
-      tag("meta", :name => "HandhellFiedly", :content => "True"),
+      tag("meta", :name => "HandheldFriendly", :content => "True"),
       tag("meta", :name => "MobileOptimized", :content => "320"),
       tag("meta", :name => "viewport", :content => "width=device-width, initial-scale=1.0"),
       tag("meta", "http-equiv" => "cleartype", "content" => "on"),
