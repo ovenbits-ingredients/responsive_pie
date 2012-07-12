@@ -1,11 +1,18 @@
 // Fluid grid with all the percentages for each grid step - usually only needs to be imported into desktop (or anything bigger than mobile)
 
 $grid_margin: 1%;
-$row_width: 95%;
+$row_width: 98%;
+//$row_width: 100%;
 
-.alpha, .first { margin-left: 0; }
+.alpha, .first { margin-left: 0 }
 
-.omega, .last { margin-right: 0; }
+.omega, .last { margin-right: 0 }
+
+.stretching_row {
+  width:100%;
+}
+
+.desktop_hide { display:none !important; }
 
 .row {
   width:$row_width;
@@ -18,85 +25,89 @@ $row_width: 95%;
     margin-right:$grid_margin;
     margin-left:$grid_margin;
     display:block;
+    &.no_margin {
+      margin-left:0;
+      margin-right:0;
+    }
   }
-  .desktop_hide { display:none; }
+  .desktop_hide, &.desktop_hide { display:none; }
   .grid_1 {
-    width: 6.333%; }
+    width: 6.333%; &.no_margin {width:8.333%;} }
   .grid_2 {
-    width: 14.666%; }
+    width: 14.666%; &.no_margin {width:16.666%;} }
   .grid_3 {
-    width: 23%; }
+    width: 23%; &.no_margin {width:25%;} }
   .grid_4 {
-    width: 31.333%; }
+    width: 31.333%; &.no_margin {width:33.333%;} }
   .grid_5 {
-    width: 39.666%; }
+    width: 39.666%; &.no_margin {width:41.666%;} }
   .grid_6 {
-    width: 48%; }
+    width: 48%; &.no_margin {width:50%;} }
   .grid_7 {
-    width: 56.333%; }
+    width: 56.333%; &.no_margin {width:58.333%;} }
   .grid_8 {
-    width: 64.666%; }
+    width: 64.666%; &.no_margin {width:66.666%;} }
   .grid_9 {
-    width: 73%; }
+    width: 73%; &.no_margin {width:75%;} }
   .grid_10 {
-    width: 81.333%; }
+    width: 81.333%; &.no_margin {width:83.333%;} }
   .grid_11 {
-    width: 89.666%; }
+    width: 89.666%; &.no_margin {width:91.666%;} }
   .grid_12 {
-    width: 98%; }
+    width: 98%; &.no_margin {width:100%;} }
   .prefix_1 {
-    margin-left: 8.333% + $grid_margin; }
+    margin-left: 8.333% + $grid_margin + !important; &.no_margin {margin-left: 10.333% + $grid_margin + !important;} }
   .prefix_2 {
-    margin-left: 16.666% + $grid_margin; }
+    margin-left: 16.666% + $grid_margin + !important; &.no_margin {margin-left: 18.666% + $grid_margin + !important;} }
   .prefix_3 {
-    margin-left: 25% + $grid_margin; }   
+    margin-left: 25% + $grid_margin + !important; &.no_margin {margin-left: 27% + $grid_margin + !important;} }   
   .prefix_4 {
-    margin-left: 33.333% + $grid_margin; }
+    margin-left: 33.333% + $grid_margin + !important; &.no_margin {margin-left: 35.333% + $grid_margin + !important;} }
   .prefix_5 {
-    margin-left: 41.666% + $grid_margin; }
+    margin-left: 41.666% + $grid_margin + !important; &.no_margin {margin-left: 43.666% + $grid_margin + !important;} }
   .prefix_6 {
-    margin-left: 50% + $grid_margin; }
+    margin-left: 50% + $grid_margin + !important; &.no_margin {margin-left: 52% + $grid_margin + !important;} }
   .prefix_7 {
-    margin-left: 58.333% + $grid_margin; }
+    margin-left: 58.333% + $grid_margin + !important; &.no_margin {margin-left: 60.333% + $grid_margin + !important;} }
   .prefix_8 {
-    margin-left: 66.666% + $grid_margin; }
+    margin-left: 66.666% + $grid_margin + !important; &.no_margin {margin-left: 68.666% + $grid_margin + !important;} }
   .prefix_9 {
-    margin-left: 75% + $grid_margin; }
+    margin-left: 75% + $grid_margin + !important; &.no_margin {margin-left: 77% + $grid_margin + !important;} }
   .prefix_10 {
-    margin-left: 83.333% + $grid_margin; }
+    margin-left: 83.333% + $grid_margin + !important; &.no_margin {margin-left: 85.333% + $grid_margin + !important;} }
   .prefix_11 {
-    margin-left: 91.666% + $grid_margin; }
+    margin-left: 91.666% + $grid_margin + !important; &.no_margin {margin-left: 93.666% + $grid_margin + !important;} }
   .suffix_1 {
-    margin-right: 8.333% + $grid_margin; }
+    margin-right: 8.333% + $grid_margin + !important; &.no_margin {margin-right: 10.333% + $grid_margin + !important;} }
   .suffix_2 {
-    margin-right: 16.666% + $grid_margin; }
+    margin-right: 16.666% + $grid_margin + !important; &.no_margin {margin-right: 18.666% + $grid_margin + !important;} }
   .suffix_3 {
-    margin-right: 25% + $grid_margin; }
+    margin-right: 25% + $grid_margin + !important; &.no_margin {margin-right: 27% + $grid_margin + !important;} }
   .suffix_4 {
-    margin-right: 33.333% + $grid_margin; }
+    margin-right: 33.333% + $grid_margin + !important; &.no_margin {margin-right: 35.333% + $grid_margin + !important;} }
   .suffix_5 {
-    margin-right: 41.666% + $grid_margin; }
+    margin-right: 41.666% + $grid_margin + !important; &.no_margin {margin-right: 43.666% + $grid_margin + !important;} }
   .suffix_6 {
-    margin-right: 50% + $grid_margin; }
+    margin-right: 50% + $grid_margin + !important; &.no_margin {margin-right: 52% + $grid_margin + !important;} }
   .suffix_7 {
-    margin-right: 58.333% + $grid_margin; }
+    margin-right: 58.333% + $grid_margin + !important; &.no_margin {margin-right: 60.333% + $grid_margin + !important;} }
   .suffix_8 {
-    margin-right: 66.666% + $grid_margin; }
+    margin-right: 66.666% + $grid_margin + !important; &.no_margin {margin-right: 68.666% + $grid_margin + !important;} }
   .suffix_9 {
-    margin-right: 75% + $grid_margin; }
+    margin-right: 75% + $grid_margin + !important; &.no_margin {margin-right: 75% + $grid_margin + !important;} }
   .suffix_10 {
-    margin-right: 83.333% + $grid_margin; }
+    margin-right: 83.333% + $grid_margin + !important; &.no_margin {margin-right: 85.333% + $grid_margin + !important;}}
   .suffix_11 {
-    margin-right: 91.666% + $grid_margin; }
+    margin-right: 91.666% + $grid_margin + !important; &.no_margin {margin-right: 93.666% + $grid_margin + !important;} }
 }
 
 /** some ie fixes **/
 .lt-ie9 {
-  .grid_1, .grid_2, .grid_3,
-  .grid_4, .grid_5, .grid_6,
-  .grid_7, .grid_8, .grid_9,
+  .grid_1, .grid_2, .grid_3, 
+  .grid_4, .grid_5, .grid_6, 
+  .grid_7, .grid_8, .grid_9, 
   .grid_10, .grid_11, .grid_12 {
-  	margin-left: ($grid_margin * .935);
-  	margin-right: ($grid_margin * .935);
+    margin-left: ($grid_margin * .935);
+    margin-right: ($grid_margin * .935);
   }
 }
