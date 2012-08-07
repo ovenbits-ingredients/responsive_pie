@@ -1,20 +1,33 @@
+//** DESKTOP STYLESHEET (The Topping)
+// - specifically desktop styles
+//**
+
 @import "partials/fluid_grid";
+@import "compass/css3";
+@import "partials/base";
 
-// ** Desktop (The Topping) **
-// Specifically desktop styles
 
-.row {
-  color:green;
-}
+//DEMO
+  //Obviously remove this code once you begin - this is for demo only
+  .row {
+    color:green;
+  }
 
-.row div {
-  line-height:2em;
-  background-color:#DAF4DF;
-  -webkit-box-shadow:inset 0 1px 0 #4FAA65, inset 0 -1px 0 #4FAA65, inset 1px 0 0 #4FAA65, inset -1px 0 0 #4FAA65;
-  -mox-box-shadow:inset 0 1px 0 #4FAA65, inset 0 -1px 0 #4FAA65, inset 1px 0 0 #4FAA65, inset -1px 0 0 #4FAA65;
-  box-shadow:inset 0 1px 0 #4FAA65, inset 0 -1px 0 #4FAA65, inset 1px 0 0 #4FAA65, inset -1px 0 0 #4FAA65;
-}
+  .row div {
+    line-height:2em;
+    background-color:#DAF4DF;
+    -webkit-box-shadow:inset 0 1px 0 #4FAA65, inset 0 -1px 0 #4FAA65, inset 1px 0 0 #4FAA65, inset -1px 0 0 #4FAA65;
+    -mox-box-shadow:inset 0 1px 0 #4FAA65, inset 0 -1px 0 #4FAA65, inset 1px 0 0 #4FAA65, inset -1px 0 0 #4FAA65;
+    box-shadow:inset 0 1px 0 #4FAA65, inset 0 -1px 0 #4FAA65, inset 1px 0 0 #4FAA65, inset -1px 0 0 #4FAA65;
+  }
 
-.row div:hover {
-  background-color:#cAe4cF;
-}
+  .row div:hover {
+    background-color:#cAe4cF;
+  }
+//END DEMO
+
+
+/*********************/
+/* Old Browser Fixes */
+
+@import "partials/old_browsers";

@@ -1,4 +1,17 @@
+//** BASE STYLESHEET
+// - base classes used that are extended in other stylesheets
+// - base borders, styles, fonts set
+// - custom mixins
+//**
+
+
 @import "compass";
+
+// max width
+$max-width: 1140px;
+
+// Including ie7 hacks.
+$legacy-support-for-ie7: true;
 
 // Reversed?
 $reversed-text: false;
@@ -11,6 +24,12 @@ $base-line-height: 1.4;
 
 // Fixed Font
 $fixed-font-family: Monaco, "Andale Mono", "Lucida Console", monospace;
+
+//Possibly easier way to set fonts:
+$font-sans-serif: Helvetica, Arial, sans-serif;
+$font-serif: Georgia, "Times New Roman", serif;
+
+
 $fixed-font-size: 85%;
 $fixed-line-height: $base-line-height;
 
@@ -40,10 +59,4 @@ $default-border-radius: 8px;
 
 @import "modules/all";
 
-@include global-reset;
-@include reset-html5;
-
-html, body { background: $background-color; }
 body { @include base-font; }
-
-@import "grid_base";

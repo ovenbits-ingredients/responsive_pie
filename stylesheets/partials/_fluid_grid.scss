@@ -13,16 +13,12 @@ $row_width: 98%;
 }
 
 .desktop_hide { display:none !important; }
+.mobile_hide { display:block; }
 
 .row {
-  width:$row_width;
-  margin-left: (100%-$row_width)/2;
-  margin-right: (100%-$row_width)/2;
-  &.no_margin {
-    margin-left:0 !important;
-    margin-right:0 !important;
-    width:100%; 
-  }
+  margin-left:0;
+  margin-right:0;
+  width:100%;
   .desktop_hide, &.desktop_hide { display:none; }
 }
 .grid_1, .grid_2, .grid_3, 
@@ -32,10 +28,12 @@ $row_width: 98%;
   margin-right:$grid_margin;
   margin-left:$grid_margin;
   display:block;
-  &.no_margin {
-    margin-left:0 !important;
-    margin-right:0 !important;
-  }
+}
+
+.no_margin {
+  margin-left:0 !important;
+  margin-right:0 !important;
+  width:100%; 
 }
 
 .grid_1 {

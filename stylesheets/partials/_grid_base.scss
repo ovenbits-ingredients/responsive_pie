@@ -5,7 +5,6 @@ html {
   font-size: 100%;
   overflow-x:hidden;
   -ms-overflow-x: hidden;
-  // overflow-y: scroll;
   -webkit-text-size-adjust: 100%;
   //-webkit-text-size-adjust: none;
 } /* Force scrollbar in non-IE and Remove iOS text size adjust without disabling user zoom */
@@ -14,8 +13,8 @@ body {
   margin: 0; 
   min-height: 100%; 
   width:100%;
-  -webkit-font-smoothing:antialiased; 
   font-smoothing:antialiased; 
+  -webkit-font-smoothing:subpixel-antialiased;
   text-rendering:optimizeLegibility
 } /* Improve default text rendering, handling of kerning pairs and ligatures */
 
@@ -25,19 +24,29 @@ body {
   z-index:112;
 }
 
+
+
+//NO MARGINS
+$mobile_left_margin:0;
+$mobile_right_margin:0;
+
+//MARGINS
 // $mobile_left_margin:1.048%; /* This worked best in browsers and landscape devices */
 // $mobile_right_margin:1%;
 
-$mobile_left_margin:0; /* This worked best in browsers and landscape devices */
-$mobile_right_margin:0;
 
 
 @mixin row_mixin {
+  position:relative;
   float:left;
-  width: 100%;// - $mobile_right_margin*2;
+  
+  //NO MARGINS
+  width: 100%;
+  
+  //MARGINS
+  //width: 100% - $mobile_right_margin*2;
   // margin-left:$mobile_left_margin;
   // margin-right:$mobile_right_margin;
-  position:relative;
 }
 
 .row {
@@ -55,7 +64,8 @@ $mobile_right_margin:0;
 .mobile_grid_1, .mobile_grid_2,
 .mobile_grid_3, .mobile_grid_4 {
   @include row_mixin;
-  margin-bottom:5px;
+  
+  //YMMV ON THIS TWEAK
   // @media screen and (max-width: 400px){
   //   margin-left:$mobile_left_margin * 1.2; /* portrait small devices */
   // }
@@ -63,39 +73,25 @@ $mobile_right_margin:0;
 
 .mobile_grid_1, .mobile_grid_2,
 .mobile_grid_3, .mobile_grid_4 {
-  margin-left:0;
-  margin-right:0;
+  margin-left:$mobile_left_margin;
+  margin-right:$mobile_right_margin;
 }
 
-/** some ie fixes **/
-//No need for this unless using IE in mobile view
-// .lt-ie9 {
-//   .row,
-//   .grid_1, .grid_2, .grid_3, 
-//   .grid_4, .grid_5, .grid_6, 
-//   .grid_7, .grid_8, .grid_9, 
-//   .grid_10, .grid_11, .grid_12 {
-//    margin-left: ($mobile_left_margin * .95);
-//    margin-right: ($mobile_right_margin * .95);
-//   }
-// }
-
 .mobile_grid_1 {
-  width: 25%;
+  width: (25% - $mobile_left_margin - $mobile_right_margin);
 }
 
 .mobile_grid_2 {
-  width:50%;
+  width:(50% - $mobile_left_margin - $mobile_right_margin);
 }
 
 .mobile_grid_3 {
-  width: 75%;
+  width: (75% - $mobile_left_margin - $mobile_right_margin);
 }
 
 .mobile_grid_4 {
-  width: 100%;
+  width: (100% - $mobile_left_margin - $mobile_right_margin);
 }
-
 
 .mobile_hide {
   display:none;
@@ -139,7 +135,7 @@ img, object, embed { max-width: 100%; }
 img { height: auto; }
 
 
-/* some clear fixes and ie things */
+/* some clear fixes and ie things - if you don't know how to use it, then don't worry about it */
 html body * {
   span.clear, div.clear, li.clear, dd.clear {
     background: none;
@@ -174,3 +170,16 @@ html body * {
 * html .clearfix {
 	height: 1%;
 }
+
+/** some ie mobile fixes **/
+//No need for this unless using IE in mobile view and it seems jacked up
+// .lt-ie9 {
+//   .row,
+//   .grid_1, .grid_2, .grid_3, 
+//   .grid_4, .grid_5, .grid_6, 
+//   .grid_7, .grid_8, .grid_9, 
+//   .grid_10, .grid_11, .grid_12 {
+//    margin-left: ($mobile_left_margin * .95);
+//    margin-right: ($mobile_right_margin * .95);
+//   }
+// }

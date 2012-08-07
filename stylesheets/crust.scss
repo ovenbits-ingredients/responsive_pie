@@ -1,10 +1,20 @@
+//** CRUST STYLESHEET
+// - declarations and foundations of styles/selectors that are used in mobile and desktop and everything in between
+// - bringing in the global-reset and reset-html5 (for cascading issues, it was moved here instead of _base)
+// - note: for classes to extend, use the _base.scss partial
+//**
+
+@import "compass";
+@include global-reset;
+@include reset-html5;
 @import "partials/base";
-
-// ** Few more custom base styles (The crust) **
-// This file is for basic layouts/styles that are applied to everything (mobile/desktop/everything in between)
-
 body {
-  font-size:1em;
+  font-size:14px;
+}
+
+.max_width { 
+  max-width:$max-width;
+  margin:0 auto;
 }
 
 .container {
@@ -17,3 +27,11 @@ body {
 .row {
   max-width:1280px;
 }
+
+/* Remove box shadow firefox, chrome and opera put around required fields. It looks rubbish. */  
+// input:required, textarea:required {  
+//   -moz-box-shadow:none;  
+//   -webkit-box-shadow:none;  
+//   -o-box-shadow:none;  
+//   box-shadow:none;  
+// }
