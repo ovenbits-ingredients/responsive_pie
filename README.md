@@ -5,11 +5,19 @@ This is a responsive design template that we can use as a starting point for any
 
 This is using serve, so that the designers on our team can get going faster without figuring out rails, etc :)  
 
-This project has compass, for the reset and utilities/mixins, although the latter isn't being used in this implementation yet. That's for you to develop in your specific project (or rip it out if you don't need it). I recommend keeping the reset stuff in there regardless, since the responsive template and grid stylesheets are depending on the reset.  
+This project has compass, for the reset and utilities/mixins. Rip out whatever you don't need. 
+I recommend keeping the reset stuff in there regardless, since the responsive template and grid stylesheets 
+are depending on the reset.  
 
-There is a view helper ruby file that has a lot of the layout helpers configured in there. If you look in the helper file,
-you'll see that some things need to be uncommented once this project's contents are permanently living in your rails app (serve doesn't include a lot of the 
-rails helpers needed for my helpers to function properly, so they're commented out). It should be pretty self explanatory if you read through the comments in the helper file.  
+There is a view helper ruby file that has a lot of the layout helpers configured in there. 
+If you look in the helper file, you'll see that some things need to be uncommented once this project's 
+contents are permanently living in your rails app (serve doesn't include a lot of the 
+rails helpers needed for my helpers to function properly, so they're commented out). 
+It should be pretty self explanatory if you read through the comments in the helper file.  
+
+When you're ready for this in your rails app, move the view helpers file to your application helper file,
+move the stylesheets to your asset pipeline (or whatever you're using)
+and as long as you use `@import` syntax and not sprockets, everything should be good to go.
 
 
 The stylesheet setup!
@@ -20,13 +28,15 @@ Everything in the /modules directory is compass/serve standard. You can mess wit
 The /partials directory has 3 stylesheets:  
 * base
 * fluid grid
-* grid base  
+* grid base 
+* old browsers  
 
-The **_base.scss** partial has all your standard color/font/background type settings for your page(s).  
-The **_fluid_grid.scss** partial has our own 12-column version of the fluid grid system.  
+The **_base.scss** partial has all your standard color/font/background type settings for your page(s). 
+The **_old_browsers.scss** partial can be used for your older browser override code. It's included automatically into the desktop.scss file.  
+The **_fluid_grid.scss** partial has our own 12-column version of the fluid grid system. You can set the margins, or use the zero-margin option. Read the comments in that file.
 The **_grid_base.scss** partial has the basic non-desktop grid classes for mobile or smaller type devices.  
 
-The only file you should edit out of those 3, is the base file, for setting your initial style variables.  
+The two grid files shouldn't be edited once you set the margins.  
 
 The root of the stylesheets directory has 3 files:  
 * crust
@@ -34,7 +44,7 @@ The root of the stylesheets directory has 3 files:
 * desktop  
 
 The **crust.scss** file has all the declarations of styles and general layouts that your entire app should possess
-no matter the type of device (colors, background colors, max-widths, containers/wrappers, fonts, etc). 
+no matter the type of device (colors, background colors, max-widths (which has a $max-width var set in the _base scss file), containers/wrappers, fonts, etc). 
 One day, we may just merge this will base (but keep the crust filename).  
 The **mobile.scss** file has all the mobile specific styles that aren't covered in crust, but that build upon it.  
 The **desktop.scss** file has all the desktop styles that are specific to large displays (bigger than mobile), 
